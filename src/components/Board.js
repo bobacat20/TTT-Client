@@ -48,7 +48,7 @@ function Board({ result, setResult }) {
 
   const chooseSquare = async (square) => {
     //check if square is empty
-    if (turn === player && board[square] === "") {
+    if (turn === player && board[square] === "" && result.state === "none") {
       setTurn(player === "X" ? "O" : "X");
 
       //sendEvent func in stream api allows to send data to a certain channel
