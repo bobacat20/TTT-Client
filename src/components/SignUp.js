@@ -6,7 +6,7 @@ function SignUp({setIsAuth}) {
   const cookies = new Cookies();
   const [user, setUser] = React.useState(null);
   const signUp = () => {
-    Axios.post("https://boba-ttt-api.onrender.com/signup" || "http://localhost:3001/signup", user).then((res) => {
+    Axios.post("https://boba-ttt-api.onrender.com/signup", user).then((res) => {
       const { token, userId, firstName, lastName, username, hashedPassword } =
         res.data;
         cookies.set("token", token);

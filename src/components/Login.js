@@ -12,7 +12,7 @@ function Login(
 
   const cookies = new Cookies();
   const login = () => {
-    Axios.post("https://boba-ttt-api.onrender.com/login" || "http://localhost:3001/login", { username, password }).then(
+    Axios.post("https://boba-ttt-api.onrender.com/login", { username, password }).then(
       (res) => {
         const { firstName, lastName, username, token, userId } = res.data;
         cookies.set("token", token);
