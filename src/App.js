@@ -6,11 +6,11 @@ import { StreamChat } from "stream-chat";
 import { Chat } from "stream-chat-react";
 import Cookies from "universal-cookie";
 import JoinGame from "./components/JoinGame";
-import { config } from "dotenv";
+//import { config } from "dotenv";
 
 function App() {
-  // const api_key = "q66zftb8s8zu";
-  const api_key = process.env.REACT_APP_API_K;
+  const api_key = "q66zftb8s8zu";
+  //const api_key = process.env.REACT_APP_API_K;
   const cookies = new Cookies();
   const token = cookies.get("token");
   const client = StreamChat.getInstance(api_key);
